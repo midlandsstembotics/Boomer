@@ -61,7 +61,7 @@ while True:
     elif(buttons & cwiid.BTN_LEFT):
         boomer.left(0.5)
         continue
-    else(buttons - cwiid.BTN_PLUS - cwiid.BTN_MINUS == 0):
+    elif(buttons - cwiid.BTN_PLUS - cwiid.BTN_MINUS == 0):
         print '\nClosing connection ...'
         wii.rumble = 1
         time.sleep(1)
