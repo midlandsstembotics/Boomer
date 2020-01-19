@@ -37,7 +37,7 @@ print("Press and hold the 1 + 2 buttons on the WII remote at the same time:")
 time.sleep(2)
 wii = cwiid.Wiimote()
 print("Connection with remote established")
-wii.rpt_mode= cwiid.RPT_BTN 
+wii.rpt_mode= cwiid.RPT_BTN
 
 
 
@@ -62,7 +62,7 @@ while True:
         boomer.left(0.5)
         continue
     elif(buttons - cwiid.BTN_PLUS - cwiid.BTN_MINUS == 0):
-        print ('\nClosing connection ...')
+        print '\nClosing connection ...'
         wii.rumble = 1
         time.sleep(1)
         wii.rumble = 0
