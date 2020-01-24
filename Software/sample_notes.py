@@ -241,4 +241,3 @@ while True:
     time.sleep(button_delay)
  
   if (buttons & cwiid.BTN_HOME):
-
