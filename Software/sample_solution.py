@@ -2,7 +2,7 @@
 
 """sample solution for operation of the 'Boomer' robot produced by Midlands STEMbotics robotics club in Winnsboro SC.
 
-Copyright (c) 2019 Daniel E Campbell
+Copyright (c) 2019 Midlands STEMbotics robotics club, Winnsboro South Carolina
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
