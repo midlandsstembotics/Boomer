@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 """sample solution for operation of the 'Boomer' robot produced by Midlands STEMbotics robotics club in Winnsboro SC.
 
@@ -46,10 +46,26 @@ while True:
     
     button_status = wii.state["buttons"]
 
+    while button_status:
+        def zero():
+            lambda: print('xxx')
+        
+        def indirect(i):
+            switcher={
+            0:zero,
+            1:one,
+            2:lambda:'two'
+            }
+
+            func=switcher.get(i,lambda :'Invalid')
+            
+            return func()
+
+        indirect(4)
 
 
 
-
+"""
     if(button_status & cwiid.BTN_UP):
         boomer.forward(0.5)
         continue
@@ -58,18 +74,70 @@ while True:
         boomer.reverse(0.3)
         continue
 
-    elif(button_status & cwiid.BTN_RIGHT):
+    elif(buttons & cwiid.BTN_RIGHT):
         boomer.right(0.5)
         continue
 
-    elif(button_status & cwiid.BTN_LEFT):
+    elif(buttons & cwiid.BTN_LEFT):
         boomer.left(0.5)
         continue
-    elif(button_status & (cwiid.BTN_PLUS & cwiid.BTN_MINUS)):
+    elif(buttons - cwiid.BTN_PLUS - cwiid.BTN_MINUS == 0):
         print("\nClosing connection ...")
         wii.rumble = 1
         time.sleep(1)
         wii.rumble = 0
         exit(wii)
         break
+    """
 
+"""
+def function1():
+
+    print ("called function 1")
+
+def function2():
+
+    print ("called function 2")
+
+def function3():
+
+    print ("called function 3")
+
+tokenDict = {"cat":function1, "dog":function2, "bear":function3}
+
+# simulate, say, lines read from a file
+
+lines = ["cat","bear","cat","dog"]
+
+for line in lines:
+
+   
+
+    # lookup the function to call for each line
+
+    functionToCall = tokenDict[line]
+
+    # and call it
+
+    functionToCall()
+"""
+
+
+"""
+def zero():
+    return 'zero'
+
+def one():
+    return 'one'
+
+def indirect(i):
+    switcher={
+        0:zero,
+        1:one,
+        2:lambda:'two'
+        }
+    func=switcher.get(i,lambda :'Invalid')
+    return func()
+
+indirect(4)
+"""
