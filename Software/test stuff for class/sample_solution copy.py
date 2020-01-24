@@ -45,8 +45,8 @@ wii.rpt_mode= cwiid.RPT_BTN
 while True:
     
     button_status = wii.state["buttons"]
-
-    while button_status:
+   
+       while button_status:
         def zero():
             lambda: print('xxx')
         
@@ -58,7 +58,7 @@ while True:
             }
 
             func=switcher.get(i,lambda :'Invalid')
-            
+
             return func()
 
         indirect(4)
