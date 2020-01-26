@@ -30,7 +30,7 @@ import cwiid
 import time
 import gpiozero
 
-boomer = gpiozero.Robot(left=(X,y), right=(x,y))
+#boomer = gpiozero.Robot(left=(X,y), right=(x,y))
 
 #controller initialization
 print("Press and hold the 1 + 2 buttons on the WII remote at the same time:")
