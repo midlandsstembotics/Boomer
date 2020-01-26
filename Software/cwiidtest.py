@@ -56,16 +56,16 @@ while True:
         print("down button pressed")
         continue
 
-    elif(buttons & cwiid.BTN_RIGHT):
+    elif(button_status & cwiid.BTN_RIGHT):
         #boomer.right(0.5)
         print("right button pressed")
         continue
 
-    elif(buttons & cwiid.BTN_LEFT):
+    elif(button_status & cwiid.BTN_LEFT):
         #boomer.left(0.5)
         print("left button pressed")
         continue
-    elif(buttons - cwiid.BTN_PLUS - cwiid.BTN_MINUS == 0):
+    elif(button_status - cwiid.BTN_PLUS - cwiid.BTN_MINUS == 0):
         print("\nClosing connection ...")
         wii.rumble = 1
         time.sleep(1)
