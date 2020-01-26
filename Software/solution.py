@@ -47,22 +47,22 @@ while True:
     button_status = wii.state["buttons"]
 
     if(button_status & cwiid.BTN_UP):
-        #boomer.forward(0.5)
+        boomer.forward(0.5)
         print("up button pressed")
         continue
 
     elif(button_status & cwiid.BTN_DOWN):
-        #boomer.reverse(0.3)
+        boomer.reverse(0.3)
         print("down button pressed")
         continue
 
     elif(buttons & cwiid.BTN_RIGHT):
-        #boomer.right(0.5)
+        boomer.right(0.5)
         print("right button pressed")
         continue
 
     elif(buttons & cwiid.BTN_LEFT):
-        #boomer.left(0.5)
+        boomer.left(0.5)
         print("left button pressed")
         continue
     elif(buttons - cwiid.BTN_PLUS - cwiid.BTN_MINUS == 0):
