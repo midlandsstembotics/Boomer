@@ -21,7 +21,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
 """
 
 
@@ -34,7 +33,7 @@ import gpiozero
 
 #controller initialization
 print("Press and hold the 1 + 2 buttons on the WII remote at the same time:")
-time.sleep(2)
+time.sleep(5)
 wii = cwiid.Wiimote()
 print("Connection with remote established")
 wii.rpt_mode= cwiid.RPT_BTN
@@ -65,11 +64,11 @@ while True:
         #boomer.left(0.5)
         print("left button pressed")
         continue
-    elif(button_status - cwiid.BTN_PLUS - cwiid.BTN_MINUS == 0):
+    elif(button_status and (wii.state[button_status] == 4112)):
         print("\nClosing connection ...")
         wii.rumble = 1
         time.sleep(1)
-        wii.rumble = 0
+        wii.rumble = 1
         exit(wii)
         break
     

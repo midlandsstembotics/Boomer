@@ -29,7 +29,7 @@ def main():
 	position = 50
 	print 'starting position: ', position
 
-        while True:
+    while True:
             if wm.state['buttons'] == 2048:
 		if position > 0:
 			position = position - 10
