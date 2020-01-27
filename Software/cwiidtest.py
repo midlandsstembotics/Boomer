@@ -64,7 +64,7 @@ while True:
         #boomer.left(0.5)
         print("left button pressed")
         continue
-    elif(wii.state[button_status] == 4112):
+    elif(button_status - cwiid.BTN_PLUS - cwiid.BTN_MINUS == 0):
         print("\nClosing connection ...")
         wii.rumble = 1
         time.sleep(1)
