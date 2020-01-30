@@ -28,25 +28,25 @@ while True:
     if(button_status & cwiid.BTN_UP):
         print("up button pressed")
         boomer.forward(0.3)
-        time.sleep(0.1)
+        time.sleep(0.2)
         continue
 
     elif(button_status & cwiid.BTN_DOWN):
         print("down button pressed")
         boomer.backward(0.3)
-        time.sleep(0.1)
+        time.sleep(0.2)
         continue
 
     elif(button_status & cwiid.BTN_RIGHT):
         print("right button pressed")
         boomer.right(0.3)
-        time.sleep(0.1)
+        time.sleep(0.2)
         continue
 
     elif(button_status & cwiid.BTN_LEFT):
         print("left button pressed")
         boomer.left(0.3)
-        time.sleep(0.1)
+        time.sleep(0.2)
         continue
     elif(button_status - cwiid.BTN_PLUS - cwiid.BTN_MINUS == 0):
         print("\nClosing connection ...")
