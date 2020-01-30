@@ -10,7 +10,7 @@ import gpiozero
 
 #set up harware links for the two motors using the indicated GPIOS.
 #NOTE: if SPI is active, must swap GPIO 20 to a different pin.
-boomer = gpiozero.Robot(left=(17,27), right=(26,13))
+boomer = gpiozero.Robot(left=(27,17), right=(26,13))
 
 #controller initialization
 print("Press and hold the 1 + 2 buttons on the WII remote at the same time:")
