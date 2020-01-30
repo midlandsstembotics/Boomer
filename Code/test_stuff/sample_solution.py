@@ -33,7 +33,7 @@ while True:
 
     elif(button_status & cwiid.BTN_DOWN):
         print("down button pressed")
-        boomer.reverse(0.3)
+        boomer.backward(0.3)
         time.sleep(0.1)
         continue
 
