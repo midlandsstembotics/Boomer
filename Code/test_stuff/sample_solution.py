@@ -55,4 +55,8 @@ while True:
         wii.rumble = 0
         exit(wii)
         break
-
+    else:
+        print("stopped")
+        boomer.stop()
+        time.sleep(0.2)
+        
