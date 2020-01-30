@@ -30,11 +30,11 @@ import cwiid
 import time
 import gpiozero
 
-boomer = gpiozero.Robot(left=(X,y), right=(x,y))
+boomer = gpiozero.Robot(left=(17,27), right=(22,23))
 
 #controller initialization
 print("Press and hold the 1 + 2 buttons on the WII remote at the same time:")
-time.sleep(2)
+time.sleep(5)
 wii = cwiid.Wiimote()
 print("Connection with remote established")
 wii.rpt_mode= cwiid.RPT_BTN
@@ -46,12 +46,8 @@ while True:
     
     button_status = wii.state["buttons"]
 
-
-
-
-
     if(button_status & cwiid.BTN_UP):
-        boomer.forward(0.5)
+        boomer.forward(0.3)
         continue
 
     elif(button_status & cwiid.BTN_DOWN):
@@ -59,13 +55,13 @@ while True:
         continue
 
     elif(button_status & cwiid.BTN_RIGHT):
-        boomer.right(0.5)
+        boomer.right(0.3)
         continue
 
     elif(button_status & cwiid.BTN_LEFT):
-        boomer.left(0.5)
+        boomer.left(0.3)
         continue
-    elif(button_status & (cwiid.BTN_PLUS & cwiid.BTN_MINUS)):
+    elif(button_status - cwiid.BTN_PLUS - cwiid.BTN_MINUS == 0):
         print("\nClosing connection ...")
         wii.rumble = 1
         time.sleep(1)
